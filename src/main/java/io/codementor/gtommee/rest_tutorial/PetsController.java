@@ -25,8 +25,8 @@ public class PetsController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public List<Pets> getPetById(@PathVariable("id") ObjectId id) {
-        return (List<Pets>) repository.findBy_id(id);
+    public Pets getPetById(@PathVariable("id") ObjectId id) {
+        return repository.findBy_id(id);
     }
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
